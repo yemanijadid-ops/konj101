@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ویرایش نوشته — پنل مدیریت</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+<main class="container">
+  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+    <a href="/admin/dashboard.html">← نوشته‌ها</a>
+    <div class="save-bar">
+      <span id="dirty" class="dirty"></span>
+      <a class="btn" id="view" href="#" target="_blank" rel="noopener">پیش‌نمایش ↗</a>
+      <button class="btn primary" id="save" type="button">ذخیره</button>
+    </div>
+  </div>
+  <div id="msg" class="msg hidden" role="status"></div>
+
+  <div class="editor-grid">
+    <div>
+      <input type="text" id="title" class="title-input" placeholder="عنوان نوشته" maxlength="200" dir="auto" aria-label="عنوان">
+      <div id="blocks" style="margin-top:18px"></div>
+      <div class="add-bar" id="add-bar"><span class="label">افزودن:</span></div>
+    </div>
+
+    <aside>
+      <section class="card">
+        <h2>انتشار</h2>
+        <label class="field"><span>وضعیت</span>
+          <select id="status"><option value="draft">پیش‌نویس (فقط خودم)</option><option value="published">منتشرشده</option></select>
+        </label>
+        <label class="field"><span>نشانی نوشته (اسلاگ)</span><input type="text" id="slug" dir="auto" maxlength="80">
+          <p class="hint" id="slug-hint"></p></label>
+      </section>
+
+      <section class="card">
+        <h2>برچسب‌ها (تگ)</h2>
+        <div id="tags-mount"></div>
+        <p class="hint">تگ‌ها نوشته‌های هم‌موضوع رو کنار هم جمع می‌کنن و به گوگل کمک می‌کنن بفهمه نوشته درباره‌ی چیه. مثلاً: «اضطراب»، «خلاصه کتاب».</p>
+      </section>
+
+      <section class="card">
+        <h2>سئو</h2>
+        <label class="field"><span>توضیح کوتاه برای گوگل <b class="counter" id="c_meta"></b></span>
+          <textarea id="meta" maxlength="300" rows="3" dir="auto"></textarea>
+          <p class="hint">اگر خالی بذاری، از اولین پاراگراف نوشته ساخته می‌شه.</p></label>
+        <label class="field"><span>عکس شاخص (آدرس عکس)</span><input type="url" id="cover" class="ltr" placeholder="https://…">
+          <p class="hint">برای نمایش وقتی لینک نوشته رو توی شبکه‌های اجتماعی می‌فرستی.</p></label>
+        <div class="serp"><div class="url" id="serp-url"></div><div class="t" id="serp-title"></div><div class="d" id="serp-desc"></div></div>
+        <ul id="seo-tips" class="hint" style="padding-inline-start:18px;margin-bottom:0"></ul>
+      </section>
+    </aside>
+  </div>
+</main>
+<script type="module" src="/admin/editor.js"></script>
+</body>
+</html>

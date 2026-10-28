@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ورود به پنل مدیریت</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+<div class="login-wrap">
+  <h1>ورود به پنل مدیریت</h1>
+  <p class="hint">رمز عبور رو وارد کن.</p>
+  <form id="form" class="card" autocomplete="on">
+    <label class="field"><span>رمز عبور</span>
+      <input type="password" id="password" name="password" autocomplete="current-password" required autofocus class="ltr">
+    </label>
+    <button class="btn primary" type="submit" id="submit">ورود</button>
+    <div id="error" class="msg error hidden" role="alert"></div>
+  </form>
+</div>
+<script type="module" src="/admin/login.js"></script>
+</body>
+</html>

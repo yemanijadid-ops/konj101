@@ -1,0 +1,95 @@
+:root {
+  --paper: #f3eee3;
+  --ink: #211e30;
+  --muted: #6b6558;
+  --accent: #4b4478;
+  --accent-soft: #eeeaf6;
+  --line: #ddd5c3;
+  --hl-yellow: #f9e48a;
+  --hl-pink: #f6c9d8;
+  --hl-green: #c9e8c9;
+  --hl-blue: #c7daf5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; }
+
+.wrap { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.site-header { padding: 44px 0 28px; border-bottom: 1px solid var(--line); }
+.brand { font-family: 'Noto Serif', serif; font-weight: 700; font-size: 1.9rem; color: var(--ink); text-decoration: none; letter-spacing: .01em; }
+.site-tagline { color: var(--muted); margin: 6px 0 0; font-size: .95rem; }
+
+main.wrap { padding-top: 40px; padding-bottom: 80px; }
+
+.home-intro { padding: 12px 0 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+.home-intro h1 { margin: 0 0 12px; font-size: 1.8rem; line-height: 1.5; }
+.home-intro p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+
+.section-title, .tag-cloud h2 { font-size: 1.05rem; color: var(--muted); font-weight: 600; margin: 0 0 8px; }
+.eyebrow { color: var(--muted); font-size: .9rem; margin: 0; }
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-item { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.post-item-title { margin: 0; font-size: 1.3rem; line-height: 1.6; }
+.post-item-title a { color: var(--ink); text-decoration: none; }
+.post-item-title a:hover { color: var(--accent); }
+.post-meta { margin: 2px 0 0; color: var(--muted); font-size: .88rem; }
+.post-excerpt { margin: 8px 0 10px; color: #4a4558; }
+.empty { color: var(--muted); }
+
+.tag-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { display: inline-block; padding: 2px 12px; background: var(--accent-soft); color: var(--accent); border-radius: 999px; font-size: .85rem; text-decoration: none; line-height: 1.8; }
+.tag:hover { background: var(--accent); color: #fff; }
+.tag-count { opacity: .65; font-size: .8em; }
+.tag-cloud { margin-top: 48px; }
+
+.post-header h1 { margin: 0; font-size: 2rem; line-height: 1.55; }
+.cover { display: block; width: 100%; border-radius: 10px; margin: 24px 0; }
+.post-body { margin-top: 24px; }
+.block { margin: 0 0 1.2em; }
+.block-heading { margin: 1.8em 0 .5em; line-height: 1.6; }
+h2.block-heading { font-size: 1.5rem; }
+h3.block-heading { font-size: 1.2rem; }
+.block-quote { margin: 1.6em 0; padding: 4px 20px; border-inline-start: 4px solid var(--accent); background: var(--accent-soft); border-radius: 6px; }
+.block-quote p { margin: .6em 0; }
+.block-quote cite { display: block; margin-bottom: .6em; color: var(--muted); font-size: .9rem; font-style: normal; }
+.block-image { margin: 1.6em 0; text-align: center; }
+.block-image img { border-radius: 8px; }
+.block-image figcaption { color: var(--muted); font-size: .88rem; margin-top: 6px; }
+.block-divider { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+
+mark { color: inherit; padding: 0 .18em; border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+mark.hl-yellow { background: var(--hl-yellow); }
+mark.hl-pink { background: var(--hl-pink); }
+mark.hl-green { background: var(--hl-green); }
+mark.hl-blue { background: var(--hl-blue); }
+
+.post-footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line); }
+.post-footer .label { color: var(--muted); font-size: .9rem; }
+.back { margin-top: 36px; }
+.preview-note { background: #fff4c9; border: 1px solid #e8d48a; padding: 8px 14px; border-radius: 8px; font-size: .9rem; }
+.not-found { text-align: center; padding: 60px 0; }
+
+.site-footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: .9rem; }
+.site-footer p { margin: 4px 0; }
+.site-footer .copy { font-family: 'Noto Serif', serif; }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .post-header h1 { font-size: 1.6rem; }
+  .home-intro h1 { font-size: 1.5rem; }
+}
