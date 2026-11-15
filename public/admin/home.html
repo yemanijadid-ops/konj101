@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>صفحه‌ی اصلی — پنل مدیریت</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+<main class="container">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+    <h1 style="margin:0;font-size:1.3rem;flex:1">ویرایش صفحه‌ی اصلی و اطلاعات سایت</h1>
+    <span id="dirty" class="dirty"></span>
+    <a class="btn" href="/" target="_blank" rel="noopener">دیدن سایت ↗</a>
+    <button class="btn primary" id="save" type="button">ذخیره</button>
+  </div>
+  <div id="msg" class="msg hidden" role="status"></div>
+
+  <div class="editor-grid">
+    <div>
+      <section class="card">
+        <h2>متن بالای صفحه‌ی اصلی</h2>
+        <label class="switch" style="margin-bottom:12px"><input type="checkbox" id="show_hero"> نمایش این بخش در صفحه‌ی اصلی</label>
+        <label class="field"><span>تیتر</span><input type="text" id="hero_title" maxlength="200"></label>
+        <label class="field"><span>متن زیر تیتر <b class="counter" id="c_hero_text"></b></span><textarea id="hero_text" maxlength="1500" rows="5"></textarea>
+          <p class="hint">می‌تونی با Enter خط جدید بسازی.</p></label>
+        <label class="field"><span>عنوان بخش لیست نوشته‌ها</span><input type="text" id="list_title" maxlength="80"></label>
+      </section>
+      <section class="card">
+        <h2>نام و توضیح سایت</h2>
+        <label class="field"><span>نام وبلاگ</span><input type="text" id="site_name" maxlength="60" class="ltr"></label>
+        <label class="field"><span>جمله‌ی کوتاه زیر نام (بالای سایت)</span><input type="text" id="tagline" maxlength="160"></label>
+        <label class="field"><span>متن پایین سایت (اختیاری)</span><textarea id="footer_text" maxlength="300" rows="2"></textarea></label>
+      </section>
+      <section class="card">
+        <h2>سئو صفحه‌ی اصلی</h2>
+        <label class="field"><span>توضیح کوتاه برای گوگل <b class="counter" id="c_meta"></b></span><textarea id="meta_description" maxlength="300" rows="3"></textarea>
+          <p class="hint">اگر خالی بذاری، از متن بالای صفحه استفاده می‌شه. حدود ۷۰ تا ۱۶۰ حرف عالیه.</p></label>
+      </section>
+    </div>
+    <aside>
+      <section class="card">
+        <h2>پیش‌نمایش زنده</h2>
+        <div class="preview-text" id="preview" style="background:#f3eee3;border-radius:10px;padding:16px;line-height:1.9"></div>
+        <h2 style="margin-top:16px">نمایش در گوگل</h2>
+        <div class="serp"><div class="url" id="serp-url"></div><div class="t" id="serp-title"></div><div class="d" id="serp-desc"></div></div>
+      </section>
+    </aside>
+  </div>
+</main>
+<script type="module" src="/admin/home.js"></script>
+</body>
+</html>
